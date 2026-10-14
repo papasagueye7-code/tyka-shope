@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyka Shop - Boutique en ligne</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- En-tête -->
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Tyka Shop</span>
+        </div>
+        <div class="cart-icon" onclick="toggleCart()">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <!-- Bannière -->
+    <section class="hero">
+        <h2>Bienvenue sur Tyka Shop</h2>
+        <p>Trouvez vos vêtements, chaussures, montres, parfums et plus encore !</p>
+    </section>
+
+    <!-- Filtres par catégories -->
+    <section class="categories" id="category-filters">
+        <button class="filter-btn active" id="all">Tous</button>
+        <button class="filter-btn" id="vetements">Vêtements</button>
+        <button class="filter-btn" id="chaussures">Chaussures</button>
+        <button class="filter-btn" id="sacs">Sacs</button>
+        <button class="filter-btn" id="parfums">Parfums</button>
+        <button class="filter-btn" id="montres">Montres</button>
+    </section>
+
+    <!-- Catalogue Produits -->
+    <main class="products-grid" id="products-container">
+        <!-- Les produits s'affichent dynamiquement ici -->
+    </main>
+
+    <!-- Panier Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Mon Panier</h3>
+                <span class="close-btn" onclick="toggleCart()">&times;</span>
+            </div>
+            <div class="cart-body" id="cart-items">
+                <p>Votre panier est vide.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="total-price">
+                    Total : <span id="cart-total">0</span> FCFA
+                </div>
+                <button class="checkout-btn" onclick="sendOrderToWhatsApp()">
+                    <i class="fa-brands fa-whatsapp"></i> Commander sur WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
